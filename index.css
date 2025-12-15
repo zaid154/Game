@@ -1,80 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main {
+    background: #172a55;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .heder {
     display: flex;
-    width: 85%;
+    gap: 10px;
     padding: 10px;
-    margin-left: 80px;
-    background: #1e293b;   
-    border-radius: 5px;
+    background: #1e293b;
+    border-radius: 8px;
     align-items: center;
     color: white;
 }
 
-.time {
-    margin-right: auto;
-}
-
-.score {
-    margin-left: auto;
-}
-
-.main {
-    background: #172a55; 
-    width: 90%;
-    margin-left: 40px;
-    height: 600px;
-    margin-top: 0;
+.heder button {
+    flex: 1;
+    background: #334155;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 .lower {
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-right: 60px;
-    height: 80%;
-    background: #111827;   
+    margin-top: 15px;
+    background: #111827;
     border-radius: 10px;
+    padding: 15px;
+    text-align: center;
 }
 
-/* buttons */
 .continue {
-    background: #22c55e;  
-    margin-left: 350px;
-    height: 40px;
+    background: #22c55e;
 }
 
 .rest {
-    background: #ef4444;   
-    margin-left: 150px;
-    height: 40px;
+    background: #ef4444;
 }
 
-button {
-    height: 40px;
-    border-radius: 10px;
+.continue,
+.rest {
+    color: white;
     border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
 }
 
-
 .grid {
+    margin-top: 15px;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 6px;
-    justify-items: center;
-    height: 70%;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
 }
 
-
 .sel_num {
-    height: 30px;
-    width: 45px;
-    border-radius: 10px;
-    background: #334155; 
+    height: 35px;
+    background: #334155;
     color: white;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
     cursor: pointer;
+    user-select: none;
 }
 
 .sel_num:hover {
@@ -82,7 +92,14 @@ button {
     color: black;
 }
 
-.body {
-    margin-top: 0;
-    padding-top: 0;
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(10, 1fr);
+    }
 }
